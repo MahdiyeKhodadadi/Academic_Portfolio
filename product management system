@@ -1,18 +1,18 @@
 class skinCareProdoct():
-    def __init__ (self,type,volume,expirationDate,price,moreIformation):
+    def __init__ (self,type,volume,expirationDate,price,moreInformation):
         self.type=type
         self.volume=volume
         self.expirationDate=expirationDate
         self.price=price
-        self.moreInformation=moreIformation
+        self.moreInformation=moreInformation
 
     def __str__ (self):
      return (f"type:{self.type}\n volume:{self.volume}\n  expirationDate:{self.expirationDate}\n price:{self.price}\n moreInformation:{self.moreInformation}\n")
     
     
 class facialCareProducts(skinCareProdoct):
-    def __init__ (self,type,volume,expirationDate,price,moreIformation,testerVolume):
-        super().__init__(type,volume,expirationDate,price,moreIformation)
+    def __init__ (self,type,volume,expirationDate,price,moreInformation,testerVolume):
+        super().__init__(type,volume,expirationDate,price,moreInformation)
         self.testerVolume=testerVolume
     def __str__ (self):
         return (f"type:{self.type}\n volume:{self.volume}\n  expirationDate:{self.expirationDate}\n price:{self.price}\n moreInformation:{self.moreInformation}\n testerVolume:{self.testerVolume}")
@@ -21,11 +21,11 @@ class facialCareProducts(skinCareProdoct):
     
 
 class lipBalm(facialCareProducts):
-    def __init__ (self,type,volume,expirationDate,price,moreIformation,testerVolume,color):
-        super().__init__(type,volume,expirationDate,price,moreIformation,testerVolume)
+    def __init__ (self,type,volume,expirationDate,price,moreInformation,testerVolume,color):
+        super().__init__(type,volume,expirationDate,price,moreInformation,testerVolume)
         self.color=color
     def __str__ (self):
-     return (f"type:{self.type}\n volume:{self.volume}\n expirationDate:{self.expirationDate}\n price:{self.price}\n moreIformation:{self.moreIformation}\n testerVolume:{self.testerVolume}\n color:{self.color}\n ")
+     return (f"type:{self.type}\n volume:{self.volume}\n expirationDate:{self.expirationDate}\n price:{self.price}\n moreInformation:{self.moreInformation}\n testerVolume:{self.testerVolume}\n color:{self.color}\n ")
 
 
 class sunscreen(facialCareProducts):
@@ -37,8 +37,8 @@ class sunscreen(facialCareProducts):
         
 
 class moisturizingLotion(facialCareProducts):
-    def __init__ (self,type,volume,expirationDate,price,moreIformation,texture, packaging):
-        super().__init__(type,volume,expirationDate,price,moreIformation)
+    def __init__ (self,type,volume,expirationDate,price,moreInformation,texture, packaging):
+        super().__init__(type,volume,expirationDate,price,moreInformation)
         self.texture=texture
         self.packaging=packaging
     def __str__ (self):
@@ -51,8 +51,8 @@ class eyeCream(facialCareProducts):
 
 
 class facialCleanser (skinCareProdoct):
-    def __init__ (self,type,volume,expirationDate,price,moreIformation,testerVolume):
-        super().__init__ (type,volume,expirationDate,price,moreIformation)
+    def __init__ (self,type,volume,expirationDate,price,moreInformation,testerVolume):
+        super().__init__ (type,volume,expirationDate,price,moreInformation)
         self.testerVolume=testerVolume
     def __str__ (self):
         return (f"type:{self.type}\n volume:{self.volume}\n  expirationDate:{self.expirationDate}\n price:{self.price}\n moreInformation:{self.moreInformation}\n testerVolume:{self.testerVolume}")
@@ -120,4 +120,5 @@ app1=app
 print(app1.registerComment(app1))
 print("_________________________________________")
 facialCareProducts1=facialCareProducts("liquid",500,"5/2023","30$","Strong hydrator",100)
+
 print(facialCareProducts1)
