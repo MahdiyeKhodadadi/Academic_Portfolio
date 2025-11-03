@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نمیگم چند حرفیه😏</title>
+  <style>
+    body {
+      font-family: "Vazirmatn", sans-serif;
+      text-align: center;
+      background-color: #fff7e6;
+      color: #333;
+      padding: 40px;
+      direction: rtl;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #aaa;
+      border-radius: 10px;
+      outline: none;
+      margin-top: 10px;
+    }
+    button {
+      background-color: #ffb347;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ffa726;
+    }
+    .message {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>نمیگم چند حرفیه😏</h2>
+  <p>یه جور قهوه:</p>
+  <input type="text" id="answer" placeholder="جواب رو بنویس..." />
+  <button onclick="checkAnswer()">ارسال</button>
+  <p class="message" id="message"></p>
+
+  <script>
+    let wrongCount = 0;
+
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.trim();
+      const message = document.getElementById("message");
+
+      if (input === "لاته" || input.toLowerCase() === "latte") {
+        message.textContent = "نه جونم لای من نیست، بگرد ببین لای چیز دیگه نیست؟!؟";
+      } else {
+        wrongCount++;
+        if (wrongCount === 1) message.textContent = "بیشتر سعی کن";
+        else if (wrongCount === 2) message.textContent = "بیشتررر";
+        else if (wrongCount === 3) message.textContent = "بیشتررر تررر";
+        else if (wrongCount === 4) message.textContent = "ترررر ترررر";
+        else message.textContent = "تررر زدیی";
+        document.getElementById("answer").value = "";
+      }
+    }
+  </script>
+</body>
+</html>
